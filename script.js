@@ -1,4 +1,4 @@
-document.querySelector('#searchMessierConstellation').addEventListener('click', findAPODDate);
+document.querySelector('#searchAPOD').addEventListener('click', findAPODDate);
 
 function findAPODDate(){
   let date = document.querySelector('#dateSearch').value;
