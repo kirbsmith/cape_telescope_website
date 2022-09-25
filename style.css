@@ -240,7 +240,7 @@ table tr:nth-child(even) {
 .prev, .next{
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 70%;
   transform: translate(0, -50%);
   width: auto;
   padding: 1rem;
@@ -260,6 +260,7 @@ table tr:nth-child(even) {
 }
 
 .numberText{
+  display: none;
   position: absolute;
   top: 1rem;
   color: white;
@@ -284,6 +285,7 @@ table tr:nth-child(even) {
 }
 
 .demo{
+  display: none;
   width: 100%;
   opacity: 0.6;
 }
@@ -296,13 +298,54 @@ table tr:nth-child(even) {
   width: 70%;
   height: auto;
 }
-/* console.log(data.hdurl)
-var imageSection = document.createElement("section");
-imageSection.setAttribute('id', 'APODSection');
-var imageSectionSource = document.getElementById('APODSection')
-imageSectionSource.appendChild(imageSection)
-var img = document.createElement("img");
-img.src = data.hdurl
-img.setAttribute('height', '800px');
-imageSection.appendChild(img)
-}) */
+
+@media only screen and (max-width: 600px){
+  *{
+    overflow-x: hidden;
+  }
+  .topH1{
+    font-size: 1.4rem;
+  }
+  .topNavList > a{
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+  }
+  #telescopePicture{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+  .descriptionParagraph{
+    text-align: center;
+  }
+  .slideImage{
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .numberText{
+    display: none;
+  }
+  .prev, .next{
+    top: 70%;
+  }
+  .row{
+    display: none;
+  }
+  th{
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: none;
+  }
+  td{
+    font-size: 0.9rem;
+    padding: none;
+    text-align: center;
+  }
+  #APODSection > img{
+    width: 100%;
+    height: auto;
+  }
+  #weatherDescription{
+    text-align: center;
+  }
+}
